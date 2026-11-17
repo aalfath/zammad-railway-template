@@ -27,7 +27,7 @@ Zammad and Elasticsearch build from this repo, so Railway tells everyone who dep
 1. Wait for the first start (3 to 6 minutes): it creates the database and the search index.
 2. Open the Zammad service's domain and log in with the email you entered and the `ZAMMAD_ADMIN_PASSWORD` value from the Zammad service's Variables tab. Change the password under Avatar → Profile → Password; the variable is only read on the first start.
 3. Set your organization name and logo under Settings → Branding.
-4. Connect a mailbox under Settings → Channels → Email. Receiving over IMAP or POP3 works on every Railway plan. Railway allows outbound SMTP only on paid plans, so on other plans send through an email provider's HTTPS API or an SMTP relay on port 2525.
+4. Connect a mailbox under Settings → Channels → Email. Receiving over IMAP or POP3 works on every Railway plan. Zammad sends mail over SMTP, which Railway allows only on the Pro plan and above ([Railway docs](https://docs.railway.com/networking/outbound-networking)).
 5. Adding a custom domain: add it to the Zammad service, then set `ZAMMAD_FQDN` to it (Zammad uses it in email links).
 
 ## Variables
